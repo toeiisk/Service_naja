@@ -14,7 +14,7 @@ class Dashboard extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://shipping-sop.herokuapp.com/shipping/orderItem/`)
+      .get(`https://shipping-sop.herokuapp.com/shipping/orderItem/`)
       .then((res) => {
         res.data.map((item) => {
           axios
