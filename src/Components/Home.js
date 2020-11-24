@@ -15,7 +15,7 @@ class Home extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://shipping-sop.herokuapp.com/shipping/orderItem/description/${this.props.location.idShipping.id}/`)
+      .get(`https://shipping-sop.herokuapp.com/shipping/orderItem/description/${this.props.location.idShipping.id}/`)
       .then((res) => {
         const shippingdata = res.data;
         console.log(shippingdata)
@@ -97,10 +97,6 @@ class Home extends Component {
         )
       }
     })
-    // if(this.state.shippingdata[0].status == 'Ordered'){
-    //   console.log(true)
-    // }
-
   }
 
 
@@ -143,29 +139,6 @@ class Home extends Component {
                       <td className="font-weight-light">{person.status}</td>
                     </tr>
                   ))}
-                  {/* <tr className="font-weight-light" style={{ fontSize: 20 }}>
-                    <th className="font-weight-light">4/11/2563 - 13:21</th>
-                    <td>Lad Krabang</td>
-                    <td>
-                      Ready
-                      <br />
-                      Waiting for delivery
-                    </td>
-                  </tr>
-                  <tr className="font-weight-light" style={{ fontSize: 20 }}>
-                    <th className="font-weight-light">5/11/2563 - 15:21</th>
-                    <td>Transit Station</td>
-                    <td>
-                      Shipped
-                      <br />
-                      Tracking: TH0124345648
-                    </td>
-                  </tr>
-                  <tr className="font-weight-light" style={{ fontSize: 20 }}>
-                    <th className="font-weight-light">6/11/2563 - 9:21</th>
-                    <td>Destination</td>
-                    <td>Success</td>
-                  </tr> */}
                 </tbody>
               </Table>
               <Link to="/">
