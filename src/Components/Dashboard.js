@@ -18,7 +18,7 @@ class Dashboard extends Component {
       .then((res) => {
         res.data.map((item) => {
           axios
-          .get(`http://shipping-sop.herokuapp.com/shipping/orderItem/description/${item.shippingid}/`)
+          .get(`https://shipping-sop.herokuapp.com/shipping/orderItem/description/${item.shippingid}/`)
           .then((res) => {
             const datashipping = {
               'id': item.id,
